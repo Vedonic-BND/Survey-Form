@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+	<title>Survey Form</title>
+	<link rel="icon" href="img/icon.png">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!---Fontawsome CDN--->
+	<link 
+	rel="stylesheet" 
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+	integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+	crossorigin="anonymous" />
+
+	<!---Google Fonts--->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header class="header">
+		<nav class="nav">
+			<div class="container-fluid">
+				<a href="index.html" class="logo">
+					<img src="img/logo.png" alt="logo">
+				</a>
+
+				<ul class="icons">
+					<li class="icon"><a class="icn" href="https://www.linkedin.com"><i class="fab fa-linkedin"></a></i></li>
+					<li class="icon"><a class="icn" href="https://www.facebook.com"><i class="fab fa-facebook"></a></i></li>
+					<li class="icon"><a class="icn" href="https://www.instagram.com"><i class="fab fa-instagram"></a></i></li>
+					<li class="icon"><a class="icn" href="https://www.twitter.com"><i class="fab fa-twitter"></a></i></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<section class="survey">
+		<div class="container-fluid">
+           	<div class="survey-container">
+           		<div class="container card-header">
+           			<h1 id="title">University of the Cordilleras Survey</h1>
+            		<p id="description">The purpose of this survey is to find out about your current experiences in college. Thank you for your time and effort.</p>
+           		</div>
+            	<form id="survey-form" action="" method="post">
+            		<div class="form-group">
+            			<label id="name-label" class="label" for="name">Name:</label>
+            			<input type="text" id="name" class="input" placeholder="Enter Your Name" required/>
+            		</div>
+            		
+            		<div class="form-group">
+            			<label id="email-label" class="label" for="email">Email:</label>
+            			<input type="email" id="email" class="input" placeholder="E-mail Address" required/>
+            		</div>
+
+            		<div class="form-group">
+            			<label id="number-label" class="label" for="id-number">Age:<span class="clue"> (optional)</span></label>
+            			<input type="number" id="number" class="input" min="10" max="100" placeholder="Age"/>
+            		</div>
+
+            		<div class="form-group">
+      					<label id="gender-label" class="label" for="gender">Gender:</label>
+      					
+      					<label class="radio-btn">
+        					<input name="user-gender" value="male" type="radio" class="input-radio" checked="">Male
+        				</label>
+
+      					<label class="radio-btn">
+        					<input name="user-gender" value="Female" type="radio" class="input-radio">Female
+        				</label>
+
+      					<label class="radio-btn">
+      						<input name="user-gender" value="other" type="radio" class="input-radio">Other
+      					</label>
+      					<br>
+    				</div>
+
+            		<div class="form-group">
+            			<label id="number-label" class="label" for="phone-number">Phone Number:</label>
+            			<input type="number" id="phone-number" class="input" placeholder="Enter Your Phone Number" required/>
+            		</div>
+
+            		<div class="form-group">
+            			<label class="label" for="college">Colleges/Institutions:</label>
+            			<select id="dropdown" class="input" name="role" class="form-control" required="">
+        					<option disabled="" selected="" value="">Select College/Institution</option>
+        					<option value="student">College of Law</option>
+        					<option value="job">College of Arts and Sciences</option>
+        					<option value="learner">College of Accountancy</option>
+        					<option value="preferNo">College of Business Administration</option>
+        					<option value="other">College of Criminal Justice Education</option>
+        					<option value="other">College of Engineering and Architecture</option>
+        					<option value="other">College of Hospitality and Tourism Management</option>
+        					<option value="other">College of Indormation Technology and Computer Science</option>
+        					<option value="other">College of Nursing</option>
+        					<option value="other">College of Teacher Education</option>
+        					<option value="other">ETEEAP</option>
+      					</select>
+            		</div>
+
+            		<div class="form-group">
+      					<p class="label">How likely are you to recommend our school to a friend or colleague?</p>
+      					<br>
+      					<br>
+      					<label class="radio-btn-choice">
+        					<input name="user-recommend" value="definitely" type="radio" class="input-radio" checked="">Definitely
+        				</label>
+        				<br>
+      					<label class="radio-btn-choice">
+        					<input name="user-recommend" value="maybe" type="radio" class="input-radio">Maybe
+        				</label>
+        				<br>
+      					<label class="radio-btn-choice">
+      						<input name="user-recommend" value="not-sure" type="radio" class="input-radio">Not sure
+      					</label>
+    				</div>
+
+    				<div class="form-group">
+      					<p class="label">What club would you like to join?<span class="clue"> (Check all that apply)</span></p>
+      					<br>
+      					<br>
+      					<label class="checkbox-btn-choice">
+      						<input name="prefer" value="us-barristers-club" type="checkbox" class="input-checkbox">UC Barristers' Club
+      					</label>
+      					<br>
+      					<label class="checkbox-btn-choice">
+        					<input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox">UC Dance Company
+        				</label>
+        				<br>
+      					<label class="checkbox-btn-choice">
+      						<input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox">UC Chorale
+      					</label>
+      					<br>
+      					<label class="checkbox-btn-choice">
+      						<input name="prefer" value="challenges" type="checkbox" class="input-checkbox">UC Saeng Ya Kasay
+      					</label>
+      					<br>
+      					<label class="checkbox-btn-choice">
+      						<input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox">UC Percussion & Orchestra
+      					</label>
+      					<br>
+      					<label class="checkbox-btn-choice">
+      						<input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox">Jaguars Esports and Stream Club
+      					</label>
+      					<br>
+      					<label id="other-club-label" class="label" for="club">If others, please specify:</label>
+            			<input type="text" class="input other-club-label-input" placeholder=""/>
+    				</div>
+
+    				<div class="form-group">
+      					<p class="label">Any comments or suggestions?</p>
+      					<br>
+      					<br>
+      					<div class="textarea">
+      						<textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+      					</div>
+    				</div>
+
+            		<div class="form-group submit">
+            			<button id="submit" type="submit" value="Submit">SUBMIT</button>
+            		</div>
+            	</form>
+           	</div>
+		</div>
+	</section>
+
+
+	<footer class="footer">
+		<p class="copyright">
+			Copyright &copy; 2021 by Venn Edward Nicolas. All rights reserved.
+		</p>
+	</footer>
+</body>
+</html>
